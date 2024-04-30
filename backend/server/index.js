@@ -4,7 +4,7 @@ const app=express()
 const cors = require("cors");
 const port=process.env.PORT || 8000
 app.use(cors())
-app.get("/",(req,res)=>{
+app.get("/api",(req,res)=>{
 res.json({name:"sajad"})
 })
 app.listen(port,()=>{
