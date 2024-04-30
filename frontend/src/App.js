@@ -6,7 +6,7 @@ function App() {
     try {
       
       const url = process.env.REACT_APP_URL;
-      const {data} = await axios.get("http://localhost:9000");
+      const {data} = await axios.get(url);
       setName(data?.name)
     } catch (error) {
       
