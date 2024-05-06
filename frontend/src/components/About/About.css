@@ -1,0 +1,45 @@
+.about-section {
+    display: flex;
+    margin-bottom: 100px;
+  }
+  
+  .image-container {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .content {
+    flex: 2;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+  }
+  
+  .content h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .content p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .content a {
+    color: #1890ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .content a:hover {
+    text-decoration: underline;
+  }
+  

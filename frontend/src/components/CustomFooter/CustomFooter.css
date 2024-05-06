@@ -1,0 +1,17 @@
+.footer-links {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.newsletter-input {
+    margin-right: 8px;
+}
+
+.footer-newsletter {
+    display: flex;
+    align-items: center;
+}

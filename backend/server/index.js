@@ -5,22 +5,15 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const { Schema } = mongoose;
+const router = require('../routes/index.js');
+const adminRoutes = require('../routes/admin.js');
+app.use(express.json()); // Middleware to parse JSON bodies
+app.use(express.urlencoded({ extended: true })); 
 const port = process.env.PORT || 8000;
 app.use(cors());
-// Define a schema
-const userSchema = new Schema({
-  name: String,
-  email: String,
-  age: Number,
-});
-
 // Create a model
-let User = mongoose.model("User", userSchema);
-app.get("/api", async(req, res) => {
-  // Example usage
-  const data=await User.find({})
-  res.json(data);
-});
+app.use('/api', router);
+app.use('/api/admin', adminRoutes);
 app.listen(port, () => {
   console.log("🟢 Server listen on port" + port);
 });
