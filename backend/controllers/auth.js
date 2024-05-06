@@ -4,7 +4,12 @@ const Trips = require("../models/Trips");
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const { generateToken } = require("../utils/jwt");
-
+let settings = {};
+try {
+  settings = require('../settings.json');
+} catch (error) {
+  console.error('Error loading settings:', error);
+}
 const signUpController=async (req, res) => {
     try {
       const { name, email, password } = req.body;

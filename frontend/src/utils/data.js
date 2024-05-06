@@ -5,11 +5,13 @@ export const fetchAdminDashboard = async (token) => {
     headers: {
       Authorization: `Bearer ${token}`,
     },
+    timeout: 10000 
+
   }); // Replace '/api/dashboard' with your actual API endpoint
   return response;
 };
 export const sigIn = async ({ email, password }) => {
-  const response = await api.post("/login", { email, password }); // Replace '/api/dashboard' with your actual API endpoint
+  const response = await api.post("/login", { email, password },{ timeout: 10000 }); // Replace '/api/dashboard' with your actual API endpoint
   return response.data;
 };
 export const addTrip = async (data, token) => {

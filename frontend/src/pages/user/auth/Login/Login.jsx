@@ -11,7 +11,8 @@ const Login = () => {
         try {
             await login(values)
         } catch (error) {
-            alert(error?.response?.data?.msg)
+            console.log(error)
+            // alert(error?.response?.data?.msg)
         }
     };
     useEffect(() => {
